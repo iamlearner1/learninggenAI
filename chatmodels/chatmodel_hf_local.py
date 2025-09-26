@@ -5,11 +5,11 @@ llm = HuggingFacePipeline.from_model_id(
     task="text-generation",
     pipeline_kwargs=dict(
         temperature = 0.5,
-        max_new_tokens = 100
+        max_new_tokens = 200
     )
 )
 
 model= ChatHuggingFace(llm=llm)  
 
-result = model.invoke("What is the capital of india")
-print(result.content)
+result = model.invoke("How many states are there in the country india and list their names as well")
+print(result)
